@@ -1,0 +1,88 @@
+html{
+    font-size: 16px;
+}
+body{
+    margin: 0rem;
+    background-color: #000000;
+    color:#FFFFFF;
+    margin-left: 2rem;
+    font-family: 'Inter', sans-serif;
+    
+}
+ul{
+    margin: 0rem;
+    padding: 0rem;
+    list-style-type: none;
+    width: 35%;
+
+}
+li{
+    border: 1px #ffffff solid;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+p{
+    margin: 0rem;
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0.3rem;
+    font-size: 18px;
+}
+button{
+    border: none;
+    padding: 0.6rem 2.5rem;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    
+}
+select{
+    border: none;
+    padding: 0.6rem 2.5rem;
+    font-size: 18px;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px #ffffff solid;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+
+}
+
+input{
+    border: 1px #FFFFFF solid;
+    padding: 0.5rem;
+    font-size: 18px;
+    width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-top: 0.8rem;
+}
+input:focus{
+    outline: none;
+}
+.add-new-user-container{
+    width: 80%;
+    margin-top: 3rem;
+}
+.form-section{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    
+}
+#new-user-form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    
+}
+.mainheader{
+    font-size: 23px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.formheader{
+    font-size: 23px;
+    margin-bottom: 3rem;
+}

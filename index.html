@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profession</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="main-div-container">
+        
+        <section class="mainheader">
+            <header>Filter ui cards via their profession.</header>
+        </section>
+        
+        <div>
+            <select name="profession" id="profession">
+                <option value="none" selected disabled hidden>Profession</option>
+                <option value="Developer">Developer</option>
+                <option value="Admin">Admin</option>
+            </select>
+
+            <section>
+                <ul id="profession-list">
+                    
+                </ul>
+            </section>
+    
+            <button style="margin-top: 1rem">Filter</button>
+        </div>
+
+            <section class="add-new-user-container">
+                <header class="formheader">Add a new User</header>
+                <section id="new-user-form">
+                    <section class="form-section">
+                        <label for="entername">Enter name</label>
+                        <input type="text" id="entername">
+                    </section>
+
+                    <section class="form-section">
+                        <label for="enterprof">Enter profession</label>
+                        <input type="text" id="enterprof">
+                    </section>
+
+                    <section class="form-section">
+                        <label for="enterage">Enter age</label>
+                        <input type="text" id="enterage">
+                    </section>
+                </section>
+
+                <button style="margin-bottom: 1rem;" onclick="addnewuser()">Add User</button>
+            </section>
+
+            <script>
+                
+            </script>
+    </div>
+
+    <script>
+        const name=["John","Jack","Karen"];
+        const profession=["Developer","Developer","Admin"];
+        const age=["18","20","19"];
+        let c=4;
+        let text="";
+
+    for(let i=0;i<name.length;i++)
+    {
+    //text=text+"<li>"+(i+1)+"Name:"+name[i]+"  Profession:"+profession[i]+"  Age:"+age[i]+"</li>";
+    let list="<li>";
+    let sno="<p>"+(i+1)+"</p>";
+    let nameval="<p>"+"Name:"+name[i]+"</p>";
+    let professionval="<p>"+"Profession:"+profession[i]+"</p>";
+    let ageno="<p>"+"Age:"+age[i]+"</p>";
+    list=list+sno+nameval+professionval+ageno+"</li>";
+    text=text+list;
+    }
+
+    document.getElementById("profession-list").innerHTML = text;
+
+    const addnewuser = () =>{
+       let nameinput=document.getElementById("entername").value;
+       let professioninput=document.getElementById("enterprof").value;
+       let ageinput=document.getElementById("enterage").value;
+
+       name.push(nameinput);
+       profession.push(professioninput);
+       age.push(ageinput);
+
+       document.getElementById("profession-list").innerHTML="<li>"+"<p>"+(c)+"</p>"+"<p>"+"Name:"+nameinput+"</p>"+"<p>"+"Profession:"+professioninput+"</p>"+"<p>"+"Age:"+ageinput+"</p>"+"</li>"
+            c++;
+    }
+
+    </script>
+
+</body>
+</html>
